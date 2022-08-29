@@ -40,11 +40,11 @@ public:
 	bool PriorElem(Data cur_e, Data* pre_e);
 	//若cur_e是L的数据元素，且不是最后一个，则用next_e返回它的后继,否则操作失败
 	bool NextElem(Data cur_e, Data* next_e);
-	//在顺序表尾部添加元素e,顺序表的长度加1
+	//在顺序表尾部添加元素e,L的长度加1
 	bool ListAppend(Data& e);
-	//在L中第i个位置之前插入新的数据元素e，顺序表的长度加1
+	//在L中第i个位置之前插入新的数据元素e，L的长度加1
 	bool ListInsert(const int i, Data& e);
-	//删除L的第i个数据元素，顺序表的长度减1
+	//删除L的第i个数据元素，L的长度减1
 	bool ListDelete(const int i);
 
 };
