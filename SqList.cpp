@@ -58,6 +58,7 @@ int SqList<Data>::ListLength()
 template<class Data>
 bool SqList<Data>::GetElem(const int i, Data& e)
 {
+	//首先检验i值是否合法
 	if (i<1 || i>this.length)
 		return false;
 	e = elem[i - 1];
@@ -119,7 +120,7 @@ bool SqList<Data>::NextElem(Data cur_e, Data* next_e)
 	}
 	return false;
 }
-//在顺序表尾部添加元素e,L的长度加1
+//在顺序表尾部添加元素e,顺序表的长度加1
 template<class Data>
 bool SqList<Data>::ListAppend(Data& e)
 {
@@ -151,7 +152,7 @@ bool SqList<Data>::ListAppend(Data& e)
 	  ++length;
 	return true;
 }
-//在L中第i个位置之前插入新的数据元素e，L的长度加1
+//在L中第i个位置之前插入新的数据元素e，顺序表的长度加1
 template<class Data>
 bool SqList<Data>::ListInsert(const int i, Data& e)
 {
@@ -191,7 +192,7 @@ bool SqList<Data>::ListInsert(const int i, Data& e)
 	++this->length;
 	return true;
 }
-//删除L的第i个数据元素，L的长度减1
+//删除L的第i个数据元素，顺序表的长度减1
 template<class Data>
 bool SqList<Data>::ListDelete(const int i)
 {

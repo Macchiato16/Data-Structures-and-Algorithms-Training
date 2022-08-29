@@ -48,9 +48,9 @@ public:
 	//在顺序表尾部添加元素e,L的长度加1
 	bool ListAppend(Data& e);
 	//在L中第i个位置之前插入新的数据元素e，L的长度加1
-	bool ListInsert(int i, Data& e);
+	bool ListInsert(const int i, Data& e);
 	//删除L的第i个数据元素，L的长度减1
-	bool ListDelete(int i);
+	bool ListDelete(const int i);
 
 };
 
