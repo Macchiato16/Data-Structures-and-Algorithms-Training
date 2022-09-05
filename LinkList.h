@@ -5,12 +5,8 @@ class LNode
 {
 public:
 	Data data;
-	LNode* next;
-	LNode()
-	{
-		this->next = NULL;
-	}
-	LNode(LNode* p = NULL)
+	LNode *next;
+	LNode(LNode *p=nullptr)
 	{
 		this->next = p;
 	}

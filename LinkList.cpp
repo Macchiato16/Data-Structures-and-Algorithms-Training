@@ -3,7 +3,7 @@ template<class Data>
 LinkList<Data>::LinkList()
 {
 	//开辟一个头节点
-	this->head = new LNode;
+	this->head = new LNode<Data>;
 	this->tail = this->head;
 	this->length = 0;
 }
@@ -24,8 +24,8 @@ bool LinkList<Data>::IsEmpty()
 template<class Data>
 void LinkList<Data>::ClearList()
 {
-	LNode<Date> *p = this->head;
-	LNode<Date> *q = this->head->next;
+	LNode<Data> *p = this->head;
+	LNode<Data> *q = this->head->next;
 	//遍历删除
 	while (q)
 	{
@@ -34,7 +34,7 @@ void LinkList<Data>::ClearList()
 		delete p;
 	}
 	//将头节点指向空,尾指针指向头节点,链表长度变为0
-	this->head->next = NULL;
+	this->head->next = nullptr;
 	this->tail = this->head;
 	this->length = 0;
 }
@@ -52,10 +52,9 @@ bool LinkList<Data>::GetElem(const int i, Data &e)
 	if (i<1 || i>this.length)
 	   return false;
 	LNode<Data>* p = this->head;
-	while (i <= 0)
+	for (int j = 0;j < i;j++)
 	{
 		p = p->next;
-		--i;
 	}
 	//此时p指向第i个元素
 	e = p->data;

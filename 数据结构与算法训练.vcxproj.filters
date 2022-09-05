@@ -13,27 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="顺序表">
+      <UniqueIdentifier>{e34a6f78-c870-4309-b98c-93acf56b1bea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="链表">
+      <UniqueIdentifier>{e04a18e5-5c18-4d9c-be98-200fe5259bd4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="SqList.cpp">
-      <Filter>源文件</Filter>
+      <Filter>顺序表</Filter>
     </ClCompile>
     <ClCompile Include="LinkList.cpp">
-      <Filter>源文件</Filter>
+      <Filter>链表</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SqList.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="config.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="SqList.h">
+      <Filter>顺序表</Filter>
+    </ClInclude>
     <ClInclude Include="LinkList.h">
-      <Filter>头文件</Filter>
+      <Filter>链表</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
