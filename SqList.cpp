@@ -1,17 +1,22 @@
 #include "SqList.h"
 template<class Data>
-SqList<Data>::SqList()
+SqList<Data>::SqList(int len)
 {
 	//初始化
-	elem = new Data[LIST_INIT_SIZE];
+	elem = new Data[len];
 	length = 0;
-	listsize = LIST_INIT_SIZE;
+	listsize = len;
 }
 template<class Data>
 SqList<Data>::SqList(SqList& L)
 {
 	//拷贝构造函数
-	this->elem = L.elem;
+	this->elem = new Data[L.listsize];
+	//遍历复制
+	for (int i = 0;i < L.length;i++)
+	{
+		this->elem[i] = L.elem[i];
+	}
 	this->length = L.length;
 	this->listsize = L.listsize;
 }

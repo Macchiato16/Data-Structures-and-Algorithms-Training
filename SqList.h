@@ -1,6 +1,6 @@
 #pragma once
 #include"config.h"
-//顺序表存储空间的初始分配量
+//顺序表存储空间的默认初始分配量
 #define LIST_INIT_SIZE 20
 //顺序表扩容时的增加量
 #define LIST_INCREMENT 5
@@ -12,13 +12,13 @@ private:
 	Data* elem; /* 存储空间基址 */
 	int length; /* 当前长度 */
 	int listsize; /* 当前分配的存储容量(以sizeof(ElemType)为单位) */
+public:
 	//默认构造函数，产生一个空的顺序表
-	SqList();
+	SqList(int len = LIST_INIT_SIZE);
 	//拷贝构造函数
 	SqList(SqList& L);
 	//析构函数，销毁顺序表
 	~SqList();
-public:
 	//以下为算法
 	//销毁顺序表
 	void DestroyList();
